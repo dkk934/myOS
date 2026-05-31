@@ -1,0 +1,19 @@
+cd ~/myOS
+rm -rf iso myOS.iso *.o kernel.bin
+make
+make run
+
+#linker
+A linker is a program that combines many compiled files into one final executable binary.
+kernel.o  ─┐
+screen.o  ─┼──► linker ───► kernel.bin
+memory.o  ─┤
+boot.o    ─┘
+ld -T linker.ld -o kernel.bin kernel.o screen.o memory.o
+
+#makefile
+A Makefile is an automation script for building programs.
+
+
+#manual run 
+qemu-system-i386 -cdrom myOS.iso
