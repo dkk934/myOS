@@ -6,15 +6,6 @@ VGA text memory, installs a Global Descriptor Table, installs an Interrupt
 Descriptor Table, remaps the Programmable Interrupt Controller, and reads
 keyboard input through IRQ 1.
 
-This README focuses on the source code workflow only. As requested, the build
-and boot packaging files are left out of the detailed explanation:
-
-- `Makefile`
-- `linker.ld`
-- `grub.cfg`
-- `iso/`
-- `myOS.iso`
-
 ## Project Structure
 
 ```text
